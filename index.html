@@ -1,0 +1,604 @@
+<!doctype html><html lang="sk"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Majo’s Food · denné menu v OC STOP SHOP, Liptovský Mikuláš — neoficiálny návrh</title>
+<meta name="description" content="Neoficiálny návrh webu pre Majo’s Food v OC STOP SHOP v Liptovskom Mikuláši: denné menu na celý týždeň, týždenný špeciál a jedlá na objednávku.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crete+Round:ital,wght@0,400;1,400&family=Staatliches&display=swap" rel="stylesheet">
+<style>
+:root{
+  --desk:#E3EADF; --desk-2:#D6DFD2; --tkt:#FAFBF4; --navy:#1B2944; --navy-2:#243659;
+  --orange:#E5621B; --mint:#8FBF9C; --ink-2:rgba(27,41,68,.72); --hair:rgba(27,41,68,.16);
+  --disp:"Staatliches","Arial Narrow","Roboto Condensed",Impact,sans-serif;
+  --text:"Crete Round",Rockwell,"Roboto Slab",Georgia,serif;
+  --wrap:1180px;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--desk);color:var(--navy);font:17px/1.55 var(--text);font-synthesis:none;padding-bottom:0}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+b,strong{font-weight:400;color:var(--navy)}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 28px}
+.lab{font:14px/1.2 var(--disp);letter-spacing:.14em;text-transform:uppercase}
+.num{font-family:var(--disp);font-variant-numeric:tabular-nums;letter-spacing:.02em}
+
+/* demo notice */
+.demo{background:var(--navy);color:#EEF3EA;font-size:14px;line-height:1.4;padding:9px 0;text-align:left}
+.demo .wrap{display:flex;gap:.6em;flex-wrap:wrap}
+.demo strong{color:#fff;font-family:var(--disp);letter-spacing:.08em;font-size:15px}
+
+/* header */
+.top{border-bottom:1px solid var(--hair);background:var(--desk)}
+.top .wrap{display:flex;align-items:center;gap:28px;min-height:76px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{width:46px;height:46px;border-radius:50%}
+.brand span{font:30px/1 var(--disp);letter-spacing:.03em}
+.nav{display:flex;gap:22px;margin-left:auto}
+.nav a{text-decoration:none;font:16px/1 var(--disp);letter-spacing:.1em;padding:14px 0;border-bottom:2px solid transparent;transition:border-color .2s}
+.nav a:hover{border-color:var(--orange)}
+.tel{font:20px/1 var(--disp);letter-spacing:.06em;text-decoration:none;background:var(--navy);color:var(--tkt);padding:12px 16px;border-radius:3px}
+.tel:hover{background:var(--navy-2)}
+
+/* hero coupon */
+.hero{padding:38px 0 30px}
+.coupon{position:relative;display:grid;grid-template-columns:200px 22px 1fr 300px;background:var(--tkt);border-radius:6px;box-shadow:0 1px 0 rgba(27,41,68,.08),0 18px 40px -28px rgba(27,41,68,.45);overflow:hidden}
+.guil{background-color:var(--tkt);background-image:
+  repeating-radial-gradient(circle at 0 120%,transparent 0 11px,rgba(143,191,156,.28) 11px 12px),
+  repeating-radial-gradient(circle at 100% -20%,transparent 0 11px,rgba(143,191,156,.28) 11px 12px)}
+.stub{background:var(--navy);color:var(--tkt);padding:26px 22px;display:flex;flex-direction:column;justify-content:space-between;gap:18px}
+.stub img{width:92px;height:92px;border-radius:50%;background:#fff;border:3px solid var(--tkt)}
+.stub .lab{color:#B9C8B7;font-size:13px}
+.stub .val{font:22px/1.1 var(--disp);letter-spacing:.04em}
+.perf{position:relative;background:radial-gradient(circle,var(--desk) 3.6px,transparent 4.2px) center 6px/22px 16px repeat-y,var(--tkt)}
+.perf::before,.perf::after{content:"";position:absolute;left:50%;width:30px;height:30px;margin-left:-15px;border-radius:50%;background:var(--desk)}
+.perf::before{top:-15px}.perf::after{bottom:-15px}
+.c-main{padding:34px 34px 30px 18px;display:flex;flex-direction:column}
+.c-main .lab{color:var(--orange)}
+.c-main h1{font:400 clamp(44px,5.2vw,66px)/.94 var(--disp);letter-spacing:.01em;margin:14px 0 18px}
+.c-main h1 em{font-style:normal;color:var(--orange)}
+.c-main p{max-width:46ch;color:var(--ink-2)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:0 20px;font:18px/1 var(--disp);letter-spacing:.08em;text-decoration:none;border-radius:3px;border:2px solid var(--navy);transition:background .2s,color .2s}
+.btn--o{background:var(--orange);border-color:var(--orange);color:var(--navy)}
+.btn--o:hover{background:#F07A37}
+.btn--l:hover{background:var(--navy);color:var(--tkt)}
+.c-val{position:relative;border-left:2px dashed var(--hair);padding:30px 26px;display:flex;flex-direction:column;justify-content:center;text-align:center;overflow:hidden}
+.c-val::before{content:"";position:absolute;inset:-40%;background:repeating-conic-gradient(from 3deg,rgba(229,98,27,.13) 0 3deg,transparent 3deg 9deg);-webkit-mask:radial-gradient(circle,#000 28%,transparent 62%);mask:radial-gradient(circle,#000 28%,transparent 62%)}
+.c-val>*{position:relative}
+.c-val .lab{color:var(--ink-2)}
+.c-val .big{font:400 108px/.9 var(--disp);letter-spacing:.02em;margin:10px 0 6px}
+.c-val .sub{font:26px/1.1 var(--disp);letter-spacing:.04em;color:var(--orange)}
+.c-val .fine{font-size:14px;color:var(--ink-2);margin-top:10px}
+.micro{grid-column:1/-1;font:9.5px/1 var(--disp);letter-spacing:.32em;white-space:nowrap;overflow:hidden;color:rgba(27,41,68,.5);border-top:1px solid var(--hair);padding:7px 0 7px 12px;background:var(--tkt)}
+
+.photo{margin-top:22px;position:relative;border-radius:6px;overflow:hidden;background:#0d0f14}
+.photo img{width:100%;aspect-ratio:1600/631;object-fit:cover}
+.photo figcaption{position:absolute;left:16px;bottom:14px;background:rgba(250,251,244,.94);color:var(--navy);font-size:14px;padding:6px 10px;border-radius:3px}
+
+.stubs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px}
+.st{background:var(--tkt);border-radius:5px;padding:18px 20px 16px;position:relative;border-top:2px dashed var(--hair)}
+.st .lab{color:var(--orange);font-size:13px}
+.st p{margin-top:6px;font-size:16px}
+.st .q{color:var(--ink-2)}
+
+/* money block: weekly menu */
+.week{background:var(--navy);color:var(--tkt);padding:74px 0 80px;margin-top:54px;position:relative;
+  background-image:repeating-radial-gradient(circle at 50% -30%,transparent 0 23px,rgba(143,191,156,.08) 23px 24px)}
+.week-h{display:grid;grid-template-columns:1fr auto;align-items:end;gap:24px;margin-bottom:28px}
+.week-h .lab{color:#B9C8B7}
+.week-h h2{font:400 clamp(46px,6.2vw,84px)/.92 var(--disp);letter-spacing:.01em;margin-top:8px}
+.week-h h2 span{color:var(--orange)}
+.week-h .note{max-width:36ch;font-size:15px;color:#C9D4C6;text-align:right}
+.days{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-bottom:-1px;position:relative;z-index:1}
+.days button{appearance:none;border:0;cursor:pointer;background:rgba(250,251,244,.08);color:var(--tkt);min-height:66px;padding:10px 6px 12px;border-radius:5px 5px 0 0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-family:var(--disp);position:relative;transition:background .2s}
+.days button:hover{background:rgba(250,251,244,.16)}
+.days .dd{font-size:26px;line-height:1;letter-spacing:.06em}
+.days .dt{font-size:14px;letter-spacing:.08em;opacity:.75}
+.days button[aria-selected=true]{background:var(--tkt);color:var(--navy)}
+.days button[aria-selected=true] .dt{color:var(--orange);opacity:1}
+.days button[data-today]::after{content:"dnes";position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--orange);color:var(--navy);font-size:12px;letter-spacing:.14em;padding:3px 7px 2px;border-radius:2px}
+.menu-grid{display:grid;grid-template-columns:1fr 330px;gap:26px;align-items:start}
+.panel[hidden]{display:none}
+.panel{background:var(--tkt);color:var(--navy);border-radius:0 0 6px 6px;display:grid;grid-template-columns:220px 1fr}
+.p-day{padding:30px 24px;border-right:2px dashed var(--hair)}
+.p-day h3{font:400 44px/.95 var(--disp);letter-spacing:.02em}
+.p-day p{font:24px/1 var(--disp);color:var(--orange);margin-top:8px;letter-spacing:.04em}
+.p-body{padding:26px 30px 30px}
+.soups{list-style:none;padding:0 0 16px;border-bottom:1px solid var(--hair);margin-bottom:8px}
+.soups li{display:grid;grid-template-columns:92px 1fr;gap:12px;padding:3px 0;font-size:17px}
+.soups li::before{content:"0,33 l";font:15px/1.7 var(--text);color:var(--ink-2)}
+.p-body .k{font:13px/1 var(--disp);letter-spacing:.16em;color:var(--orange);margin-bottom:6px;display:block}
+.mains{list-style:none;padding:0}
+.mains li{display:grid;grid-template-columns:92px 1fr auto;gap:12px;align-items:baseline;padding:11px 0;border-bottom:1px dotted rgba(27,41,68,.3)}
+.mains li:last-child{border-bottom:0}
+.mains .w{font:14px/1.3 var(--text);color:var(--ink-2);white-space:nowrap}
+.mains .p{font:26px/1 var(--disp);color:var(--orange);letter-spacing:.03em;font-variant-numeric:tabular-nums}
+.menu-fine{font-size:14px;color:#C9D4C6;margin-top:16px;max-width:70ch}
+
+.special{background:var(--tkt);color:var(--navy);border-radius:6px;position:relative;overflow:hidden}
+.special .sp-top{background:var(--orange);color:var(--navy);padding:14px 20px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.special .sp-top .lab{font-size:15px}
+.special .sp-top i{font:italic 16px/1 var(--text)}
+.special .sp-b{padding:20px 22px 22px}
+.special h3{font:400 38px/.95 var(--disp);letter-spacing:.02em}
+.special ul{list-style:none;padding:0;margin:12px 0 18px}
+.special li{padding:5px 0;border-top:1px dotted rgba(27,41,68,.3)}
+.special .row{display:flex;justify-content:space-between;align-items:end;border-top:2px dashed var(--hair);padding-top:14px}
+.special .row .num{font-size:58px;line-height:.85;color:var(--orange)}
+.special .row small{font:15px/1.2 var(--text);color:var(--ink-2)}
+.special .src{font-size:13px;color:var(--ink-2);margin-top:12px}
+
+/* a la carte */
+.carte{padding:84px 0 20px}
+.sec-h{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:26px;flex-wrap:wrap}
+.sec-h h2{font:400 clamp(40px,5vw,64px)/.95 var(--disp);letter-spacing:.01em}
+.sec-h .lab{color:var(--orange);display:block;margin-bottom:10px}
+.sec-h p{max-width:44ch;color:var(--ink-2);font-size:15px}
+.sheet{background:var(--tkt);border-radius:6px;display:grid;grid-template-columns:1.35fr 1fr;box-shadow:0 18px 40px -30px rgba(27,41,68,.5)}
+.sheet section{padding:28px 32px 30px}
+.sheet section+section{border-left:2px dashed var(--hair)}
+.sheet h3{font:400 24px/1 var(--disp);letter-spacing:.1em;margin-bottom:12px}
+.lst{list-style:none;padding:0}
+.lst li{display:flex;align-items:baseline;gap:10px;padding:7px 0}
+.lst .w{font:14px/1 var(--text);color:var(--ink-2);min-width:50px}
+.lst .n{flex:0 1 auto}
+.lst .d{flex:1;border-bottom:2px dotted rgba(27,41,68,.28);transform:translateY(-4px);min-width:16px}
+.lst .p{font:21px/1 var(--disp);color:var(--orange);letter-spacing:.03em;font-variant-numeric:tabular-nums}
+.soup-box{margin-top:20px;border:2px solid var(--navy);border-radius:4px;padding:12px 14px}
+.sheet .foot{grid-column:1/-1;border-top:1px solid var(--hair);padding:12px 32px;font-size:14px;color:var(--ink-2)}
+
+/* 20 tickets */
+.twenty{padding:70px 0 20px}
+.tw{display:grid;grid-template-columns:1fr 1.05fr;gap:44px;align-items:center}
+.tw h2{font:400 clamp(40px,5vw,64px)/.95 var(--disp);letter-spacing:.01em;margin:10px 0 16px}
+.tw h2 span{color:var(--orange)}
+.tw blockquote{font:italic 19px/1.5 var(--text);border-left:3px solid var(--orange);padding-left:16px;margin:0 0 14px}
+.tw p{color:var(--ink-2)}
+.block20{background:var(--tkt);border-radius:6px;padding:14px;display:grid;grid-template-columns:repeat(5,1fr);gap:0;box-shadow:0 18px 40px -30px rgba(27,41,68,.5)}
+.block20 span{aspect-ratio:1.55;display:flex;flex-direction:column;align-items:center;justify-content:center;border-right:2px dashed var(--hair);border-bottom:2px dashed var(--hair);font:22px/1 var(--disp);letter-spacing:.08em}
+.block20 span:nth-child(5n){border-right:0}
+.block20 span:nth-last-child(-n+5){border-bottom:0}
+.block20 span small{font-size:12px;letter-spacing:.12em;color:var(--orange);margin-top:4px}
+
+/* contact */
+.contact{padding:84px 0 90px}
+.ct{display:grid;grid-template-columns:1.1fr 1fr 1fr;background:var(--tkt);border-radius:6px;overflow:hidden;box-shadow:0 18px 40px -30px rgba(27,41,68,.5)}
+.ct>div{padding:28px 30px}
+.ct>div+div{border-left:2px dashed var(--hair)}
+.ct h3{font:400 15px/1 var(--disp);letter-spacing:.16em;color:var(--orange);margin-bottom:12px}
+.ct .addr{font:400 34px/1 var(--disp);letter-spacing:.02em;margin-bottom:8px}
+.ct p{margin-bottom:8px}
+.ct a{text-decoration-thickness:1px;text-underline-offset:3px}
+.ct .bigtel{font:400 34px/1 var(--disp);letter-spacing:.04em;text-decoration:none;display:inline-block;margin:2px 0 10px}
+.ct table{border-collapse:collapse;width:100%}
+.ct td{padding:7px 0;border-bottom:1px dotted rgba(27,41,68,.3)}
+.ct td+td{text-align:right;font:19px/1 var(--disp);letter-spacing:.04em;font-variant-numeric:tabular-nums}
+.ct tr[data-today] td{color:var(--orange)}
+.ct .fine{font-size:14px;color:var(--ink-2);margin-top:10px}
+.score{display:flex;gap:12px;margin-top:14px;flex-wrap:wrap}
+.score div{border:2px solid var(--navy);border-radius:4px;padding:10px 12px;min-width:132px}
+.score b{font:400 34px/1 var(--disp);display:block}
+.score small{font-size:13px;color:var(--ink-2);display:block;line-height:1.3}
+.ct .btn{margin-top:14px}
+
+footer{background:var(--navy);color:#C9D4C6;padding:26px 0 30px;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer strong{color:var(--tkt);font:16px/1.3 var(--disp);letter-spacing:.1em}
+footer a{color:var(--tkt)}
+
+.mbar{display:none}
+
+@media (max-width:1060px){
+  .coupon{grid-template-columns:170px 22px 1fr}
+  .c-val{grid-column:1/-1;border-left:0;border-top:2px dashed var(--hair);flex-direction:row;align-items:center;justify-content:center;gap:22px;text-align:left;padding:20px}
+  .c-val .big{font-size:76px;margin:0}
+  .menu-grid{grid-template-columns:1fr}
+  .special{max-width:560px}
+  .ct{grid-template-columns:1fr 1fr}
+  .ct>div:last-child{grid-column:1/-1;border-left:0;border-top:2px dashed var(--hair)}
+}
+@media (max-width:760px){
+  body{font-size:16px;padding-bottom:calc(64px + env(safe-area-inset-bottom))}
+  .wrap{padding:0 16px}
+  .nav{display:none}
+  .top .wrap{min-height:64px;justify-content:space-between}
+  .brand span{font-size:26px}
+  .tel{font-size:17px;padding:11px 12px}
+  .hero{padding:20px 0 20px}
+  .coupon{grid-template-columns:1fr}
+  .stub{flex-direction:row;align-items:center;padding:14px 16px}
+  .stub img{width:56px;height:56px}
+  .stub .val{font-size:18px}
+  .stub>div:last-child{text-align:right}
+  .perf{height:22px;background:radial-gradient(circle,var(--desk) 3.6px,transparent 4.2px) 6px center/16px 22px repeat-x,var(--tkt)}
+  .perf::before,.perf::after{top:50%;left:auto;margin:-15px 0 0}
+  .perf::before{left:-15px}.perf::after{right:-15px;bottom:auto}
+  .c-main{padding:18px 18px 22px}
+  .c-main h1{font-size:44px}
+  .c-val{flex-direction:column;text-align:center;gap:4px}
+  .c-val .big{font-size:72px}
+  .btn{flex:1 1 100%;justify-content:center}
+  .photo figcaption{position:static;border-radius:0;background:var(--tkt)}
+  .photo img{aspect-ratio:16/9;object-position:50% 40%}
+  .stubs{grid-template-columns:1fr;gap:10px}
+  .week{padding:50px 0 56px;margin-top:36px}
+  .week-h{grid-template-columns:1fr}
+  .week-h .note{text-align:left}
+  .days{gap:4px}
+  .days button{min-height:58px;padding:8px 2px 10px}
+  .days .dd{font-size:21px}
+  .days .dt{font-size:12px;letter-spacing:0}
+  .panel{grid-template-columns:1fr}
+  .p-day{border-right:0;border-bottom:2px dashed var(--hair);padding:18px 18px 14px;display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+  .p-day h3{font-size:34px}
+  .p-day p{font-size:20px;margin:0}
+  .p-body{padding:14px 18px 20px}
+  .soups li,.mains li{grid-template-columns:1fr auto}
+  .soups li::before{display:none}
+  .mains .w{grid-column:1/-1;grid-row:1;font-size:13px}
+  .mains .n{grid-row:2}
+  .mains .p{grid-row:2;font-size:24px}
+  .carte,.contact{padding:56px 0 60px}
+  .twenty{padding:40px 0 10px}
+  .sheet,.tw,.ct{grid-template-columns:1fr}
+  .sheet section{padding:20px 18px}
+  .sheet section+section{border-left:0;border-top:2px dashed var(--hair)}
+  .sheet .foot{padding:12px 18px}
+  .lst li{display:grid;grid-template-columns:44px 1fr auto;column-gap:10px;align-items:baseline;border-bottom:1px dotted rgba(27,41,68,.25)}
+  .lst li:last-child{border-bottom:0}
+  .lst .w{grid-column:1;min-width:0}.lst .n{grid-column:2}.lst .p{grid-column:3}.lst .d{display:none}
+  .soup-box .lst li{grid-template-columns:1fr auto}.soup-box .lst .n{grid-column:1}.soup-box .lst .p{grid-column:2}
+  .ct>div{padding:22px 18px}
+  .ct>div+div{border-left:0;border-top:2px dashed var(--hair)}
+  .block20{padding:8px}
+  .block20 span{font-size:16px}
+  .block20 span small{font-size:10px}
+  .mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--navy);padding:8px 10px calc(8px + env(safe-area-inset-bottom));gap:8px;box-shadow:0 -6px 18px rgba(0,0,0,.2)}
+  .mbar a{min-height:48px;display:flex;align-items:center;justify-content:center;font:19px/1 var(--disp);letter-spacing:.1em;text-decoration:none;border-radius:3px;color:var(--tkt);border:2px solid rgba(250,251,244,.5)}
+  .mbar a:first-child{background:var(--orange);border-color:var(--orange);color:var(--navy)}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+
+<div class="demo" role="note"><div class="wrap"><strong>Neoficiálny návrh — nie je to oficiálny web podniku</strong><span>· ukážka od webdavid.sk, objednávky ani rezervácie tu nefungujú</span></div></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#"><img src="assets/logo.webp" width="46" height="46" alt="Logo Majo’s Food"><span>Majo’s Food</span></a>
+    <nav class="nav" aria-label="Hlavná navigácia">
+      <a href="#menu">Menu týždňa</a><a href="#special">Špeciál</a><a href="#objednavka">Na objednávku</a><a href="#listky">20 lístkov</a><a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="tel" href="tel:+421908966089">0908 966 089</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" aria-labelledby="h1">
+  <div class="wrap">
+    <div class="coupon">
+      <div class="stub">
+        <img src="assets/logo.webp" width="92" height="92" alt="">
+        <div><span class="lab">Platí</span><div class="val num">28. 9. – 4. 10. 2026</div></div>
+        <div><span class="lab">Séria</span><div class="val num">40 / 2026</div></div>
+      </div>
+      <div class="perf" aria-hidden="true"></div>
+      <div class="c-main guil">
+        <span class="lab">Obedový lístok · OC STOP SHOP · Liptovský Mikuláš</span>
+        <h1 id="h1">Denné menu od&nbsp;<em>7,00&nbsp;€</em><br>sedem dní v&nbsp;týždni</h1>
+        <p>Majo’s Food varí v OC STOP SHOP na Ul. 1. mája 41. Každý deň dve polievky a tri až štyri hlavné jedlá, k tomu týždenný špeciál a jedlá na objednávku.</p>
+        <div class="cta"><a class="btn btn--o" href="#menu">Menu na tento týždeň</a><a class="btn btn--l" href="tel:+421908966089">Zavolať 0908 966 089</a></div>
+      </div>
+      <div class="c-val">
+        <span class="lab">Hodnota</span>
+        <div class="big">OBED</div>
+        <div><div class="sub num">od 7,00 €</div><p class="fine">„Tradične dobré jedlá“<br>— nápis nad ich pultom</p></div>
+      </div>
+      <div class="micro" aria-hidden="true">MAJO’S FOOD · TRADIČNE DOBRÉ JEDLÁ · MAJO’S FOOD · TRADIČNE DOBRÉ JEDLÁ · MAJO’S FOOD · TRADIČNE DOBRÉ JEDLÁ · MAJO’S FOOD · TRADIČNE DOBRÉ JEDLÁ · MAJO’S FOOD · TRADIČNE DOBRÉ JEDLÁ · MAJO’S FOOD · TRADIČNE DOBRÉ JEDLÁ</div>
+    </div>
+
+    <figure class="photo">
+      <img src="assets/stanok.webp" width="1600" height="631" fetchpriority="high" alt="Pult Majo’s Food v obchodnom centre: svietiace logo, obrazovky s denným menu a nápisom Tradične dobré jedlá">
+      <figcaption>Pult Majo’s Food v OC STOP SHOP · foto z ich Facebooku</figcaption>
+    </figure>
+
+    <div class="stubs">
+      <div class="st"><span class="lab">Kde</span><p>OC STOP SHOP, Ul. 1. mája 41, Liptovský Mikuláš</p></div>
+      <div class="st"><span class="lab">Kedy</span><p>Po–Pi 10:30–19:00 · So–Ne 9:00–19:00 <span class="q">(overiť)</span></p></div>
+      <div class="st"><span class="lab">Rozvoz</span><p class="q">„Donáškovú službu neponúkame.“ — z ich jedálneho lístka</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="week" id="menu" aria-labelledby="menu-h">
+  <div class="wrap">
+    <div class="week-h">
+      <div><span class="lab">Denné menu · týždeň 40</span><h2 id="menu-h">28. 9. – <span>4. 10. 2026</span></h2></div>
+      <p class="note">„Jedálny lístok je len informatívny, môžu sa vyskytnúť zmeny.“</p>
+    </div>
+    <div class="menu-grid">
+      <div>
+        <div class="days" role="tablist" aria-label="Deň v týždni">
+          <button role="tab" id="t1" data-dow="1" data-day="1" aria-controls="d1" aria-selected="true"><span class="dd">Po</span><span class="dt">28. 9.</span></button>
+          <button role="tab" id="t2" data-dow="2" data-day="2" aria-controls="d2" aria-selected="false"><span class="dd">Ut</span><span class="dt">29. 9.</span></button>
+          <button role="tab" id="t3" data-dow="3" data-day="3" aria-controls="d3" aria-selected="false"><span class="dd">St</span><span class="dt">30. 9.</span></button>
+          <button role="tab" id="t4" data-dow="4" data-day="4" aria-controls="d4" aria-selected="false"><span class="dd">Št</span><span class="dt">1. 10.</span></button>
+          <button role="tab" id="t5" data-dow="5" data-day="5" aria-controls="d5" aria-selected="false"><span class="dd">Pi</span><span class="dt">2. 10.</span></button>
+          <button role="tab" id="t6" data-dow="6" data-day="6" aria-controls="d6" aria-selected="false"><span class="dd">So</span><span class="dt">3. 10.</span></button>
+          <button role="tab" id="t0" data-dow="0" data-day="0" aria-controls="d0" aria-selected="false"><span class="dd">Ne</span><span class="dt">4. 10.</span></button>
+        </div>
+
+        <div class="panel" id="d1" role="tabpanel" aria-labelledby="t1">
+          <div class="p-day"><h3>Pondelok</h3><p class="num">28. 9. 2026</p></div>
+          <div class="p-body">
+            <span class="k lab">Polievky</span>
+            <ul class="soups"><li class="dish-name">Hubová polievka s mrvenicou</li><li>Paradajková s cestovinou</li></ul>
+            <ul class="mains">
+              <li><span class="w">150 g / 200 g</span><span class="n">Pečená krkovička, červená kapusta, knedľa</span><span class="p">7,00 €</span></li>
+              <li><span class="w">120 g / 180 g</span><span class="n">Bravčové na znojemský spôsob, tarhoňa</span><span class="p">7,00 €</span></li>
+              <li><span class="w">120 g / 150 g</span><span class="n">Kuracie rizoto s kyslou uhorkou</span><span class="p">7,00 €</span></li>
+              <li><span class="w">100 g / 200 g</span><span class="n">Vyprážaný syr, varené zemiaky, tatárska omáčka</span><span class="p">7,20 €</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel" id="d2" role="tabpanel" aria-labelledby="t2">
+          <div class="p-day"><h3>Utorok</h3><p class="num">29. 9. 2026</p></div>
+          <div class="p-body">
+            <span class="k lab">Polievky</span>
+            <ul class="soups"><li class="dish-name">Šošovicová polievka so zeleninou</li><li>Slepačia polievka so zeleninou a rezancami</li></ul>
+            <ul class="mains">
+              <li><span class="w">120 g / 200 g</span><span class="n">Bravčová panenka so slivkovou omáčkou, pečené zemiaky</span><span class="p">7,20 €</span></li>
+              <li><span class="w">120 g / 180 g</span><span class="n">Bratislavské bravčové pliecko, cestoviny</span><span class="p">7,00 €</span></li>
+              <li><span class="w">120 g / 150 g</span><span class="n">Kurací rezeň, zemiaková kaša</span><span class="p">7,00 €</span></li>
+              <li><span class="w">300 g</span><span class="n">Bryndzové halušky so slaninou, zákvas</span><span class="p">7,00 €</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel" id="d3" role="tabpanel" aria-labelledby="t3">
+          <div class="p-day"><h3>Streda</h3><p class="num">30. 9. 2026</p></div>
+          <div class="p-body">
+            <span class="k lab">Polievky</span>
+            <ul class="soups"><li class="dish-name">Kapustová polievka s krúpkami</li><li>Rascová polievka s vajcom</li></ul>
+            <ul class="mains">
+              <li><span class="w">120 g / 180 g</span><span class="n">Hovädzí pivný guláš, kysnutá knedľa</span><span class="p">7,50 €</span></li>
+              <li><span class="w">120 g / 200 g</span><span class="n">Fašírka s fazuľkovým prívarom, varené zemiaky</span><span class="p">7,00 €</span></li>
+              <li><span class="w">120 g / 180 g</span><span class="n">Kuracie rezance so syrovou omáčkou, špenátové halušky</span><span class="p">7,00 €</span></li>
+              <li><span class="w">300 g</span><span class="n">Slivkové knedle s opraženou strúhankou, maslový cukor</span><span class="p">7,00 €</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel" id="d4" role="tabpanel" aria-labelledby="t4">
+          <div class="p-day"><h3>Štvrtok</h3><p class="num">1. 10. 2026</p></div>
+          <div class="p-body">
+            <span class="k lab">Polievky</span>
+            <ul class="soups"><li class="dish-name">Gulášová polievka</li><li>Slepačia polievka so zeleninou a rezancami</li></ul>
+            <ul class="mains">
+              <li><span class="w">120 g / 180 g</span><span class="n">Hovädzie na paprike s basmati ryžou</span><span class="p">7,50 €</span></li>
+              <li><span class="w">120 g / 200 g</span><span class="n">Slovenská živánska s kyslou uhorkou</span><span class="p">7,00 €</span></li>
+              <li><span class="w">120 g / 150 g</span><span class="n">Kurací plátok s dusenou zeleninou na masle, pečené zemiaky</span><span class="p">7,00 €</span></li>
+              <li><span class="w">120 g / 200 g</span><span class="n">Lososové guličky so syrom, zemiaková kaša, listový šalát</span><span class="p">7,20 €</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel" id="d5" role="tabpanel" aria-labelledby="t5">
+          <div class="p-day"><h3>Piatok</h3><p class="num">2. 10. 2026</p></div>
+          <div class="p-body">
+            <span class="k lab">Polievky</span>
+            <ul class="soups"><li class="dish-name">Mexická polievka s mletým mäsom</li><li>Špenátová polievka s vajcom</li></ul>
+            <ul class="mains">
+              <li><span class="w">120 g / 180 g</span><span class="n">Hovädzia sviečková na smotane, kysnutá knedľa</span><span class="p">7,20 €</span></li>
+              <li><span class="w">120 g / 200 g</span><span class="n">Belehradský rezeň, pučené zemiaky</span><span class="p">7,00 €</span></li>
+              <li><span class="w">120 g / 150 g</span><span class="n">Kuracie rezance na mexický spôsob, dusená ryža</span><span class="p">7,00 €</span></li>
+              <li><span class="w">300 g</span><span class="n">Špenátové lasagne s parmezánom</span><span class="p">7,20 €</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel" id="d6" role="tabpanel" aria-labelledby="t6">
+          <div class="p-day"><h3>Sobota</h3><p class="num">3. 10. 2026</p></div>
+          <div class="p-body">
+            <span class="k lab">Polievky</span>
+            <ul class="soups"><li class="dish-name">Brokolicový krém</li><li>Kelová polievka s klobásou</li></ul>
+            <ul class="mains">
+              <li><span class="w">120 g / 180 g</span><span class="n">Bravčový paprikáš s cestovinou</span><span class="p">7,50 €</span></li>
+              <li><span class="w">120 g / 150 g</span><span class="n">Kuracie prsia zapekané so syrom a šunkou, ½ ryža, ½ hranolky</span><span class="p">7,50 €</span></li>
+              <li><span class="w">120 g / 180 g</span><span class="n">Krkovička na rozmaríne, opekané zemiaky, čalamáda</span><span class="p">7,50 €</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel" id="d0" role="tabpanel" aria-labelledby="t0">
+          <div class="p-day"><h3>Nedeľa</h3><p class="num">4. 10. 2026</p></div>
+          <div class="p-body">
+            <span class="k lab">Polievky</span>
+            <ul class="soups"><li class="dish-name">Cícerová polievka</li><li>Hovädzí vývar so zeleninou a rezancami</li></ul>
+            <ul class="mains">
+              <li><span class="w">120 g / 200 g</span><span class="n">Bravčový rezeň, zemiaková kaša, coleslaw</span><span class="p">7,50 €</span></li>
+              <li><span class="w">120 g / 180 g</span><span class="n">Pečený bôčik, kyslá kapusta, kysnutá knedľa</span><span class="p">7,50 €</span></li>
+              <li><span class="w">120 g / 150 g</span><span class="n">Kurací soté na hrášku, ryža</span><span class="p">7,50 €</span></li>
+            </ul>
+          </div>
+        </div>
+        <p class="menu-fine">Prepísané z ich jedálneho lístka na Facebooku (28. 9. – 4. 10. 2026). Polievky sú v porciách 0,33&nbsp;l.</p>
+      </div>
+
+      <aside class="special" id="special" aria-labelledby="sp-h">
+        <div class="sp-top"><span class="lab">Týždenný špeciál</span><i>Len tento týždeň!</i></div>
+        <div class="sp-b">
+          <h3 id="sp-h">Marinovaná krkovička na grile</h3>
+          <ul><li>Steakové hranolky</li><li>Coleslaw šalát</li></ul>
+          <div class="row"><small>150 g / 150 g</small><span class="num">8,90 €</span></div>
+          <p class="src">Podľa plagátu na ich Facebooku (28. 9. 2026) — aktuálnosť overiť.</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="carte" id="objednavka" aria-labelledby="carte-h">
+  <div class="wrap">
+    <div class="sec-h">
+      <div><span class="lab">„Ponúkame jedlá na objednávku“</span><h2 id="carte-h">Jedlá na objednávku</h2></div>
+      <p>Prepis tabule nad pultom z fotky na ich Facebooku. Dátum fotky nepoznáme, ceny preto pred zverejnením overiť.</p>
+    </div>
+    <div class="sheet">
+      <section aria-label="Hlavné jedlá">
+        <h3>Jedlá</h3>
+        <ul class="lst">
+          <li><span class="w">150 g</span><span class="n">Majo’s burger s hranolkami</span><span class="d"></span><span class="p">12,90 €</span></li>
+          <li><span class="w">150 g</span><span class="n">Kurací steak s dusenou zeleninou</span><span class="d"></span><span class="p">7,00 €</span></li>
+          <li><span class="w">150 g</span><span class="n">Kuracie soté s hríbovou omáčkou</span><span class="d"></span><span class="p">7,00 €</span></li>
+          <li><span class="w">200 g</span><span class="n">Kuracie stripsy</span><span class="d"></span><span class="p">7,00 €</span></li>
+          <li><span class="w">120 g</span><span class="n">Vyprážaný hermelín</span><span class="d"></span><span class="p">7,00 €</span></li>
+          <li><span class="w">300 g</span><span class="n">Zemiakové knedle plnené slivkami</span><span class="d"></span><span class="p">7,00 €</span></li>
+          <li><span class="w">300 g</span><span class="n">Bryndzové halušky so slaninkou</span><span class="d"></span><span class="p">7,80 €</span></li>
+          <li><span class="w">250 g</span><span class="n">Šalát Cezar</span><span class="d"></span><span class="p">7,80 €</span></li>
+        </ul>
+      </section>
+      <section aria-label="Prílohy a polievky">
+        <h3>Prílohy</h3>
+        <ul class="lst">
+          <li><span class="w">150 g</span><span class="n">Zemiakové hranolky</span><span class="d"></span><span class="p">2,00 €</span></li>
+          <li><span class="w">200 g</span><span class="n">Varené zemiaky</span><span class="d"></span><span class="p">2,00 €</span></li>
+          <li><span class="w">150 g</span><span class="n">Americké zemiaky</span><span class="d"></span><span class="p">2,50 €</span></li>
+          <li><span class="w">150 g</span><span class="n">Zemiakové krokety</span><span class="d"></span><span class="p">2,50 €</span></li>
+          <li><span class="w">150 g</span><span class="n">Dusená ryža</span><span class="d"></span><span class="p">2,50 €</span></li>
+          <li><span class="w">200 g</span><span class="n">Grilovaná zelenina</span><span class="d"></span><span class="p">3,00 €</span></li>
+          <li><span class="w">100 g</span><span class="n">Šalát z bufetu</span><span class="d"></span><span class="p">3,80 €</span></li>
+          <li><span class="w">50 g</span><span class="n">Tatárska omáčka domáca</span><span class="d"></span><span class="p">1,00 €</span></li>
+        </ul>
+        <div class="soup-box"><ul class="lst"><li><span class="n">Polievky podľa dennej ponuky</span><span class="d"></span><span class="p">2,50 €</span></li></ul></div>
+      </section>
+      <p class="foot">„Všetky ceny sú uvedené s DPH.“ Na tabuli sú aj ďalšie jedlá, ktoré na fotke zakrýva lampa.</p>
+    </div>
+  </div>
+</section>
+
+<section class="twenty" id="listky" aria-labelledby="tw-h">
+  <div class="wrap tw">
+    <div>
+      <span class="lab" style="color:var(--orange)">Pre pravidelných stravníkov</span>
+      <h2 id="tw-h">Blok 20 lístkov — obed za <span>6,50 €</span></h2>
+      <blockquote>„Zvýhodnená cena obedového menu (6,50 €) pri kúpe min. 20 lístkov. Viac info na 0908 966 089“</blockquote>
+      <p>Text z hlavičky ich týždenného jedálneho lístka. Podmienky lístkov najlepšie cez telefón: <a href="tel:+421908966089">0908 966 089</a>.</p>
+    </div>
+    <div class="block20" aria-hidden="true">
+      <span>Obed<small>6,50 €</small></span><span>Obed<small>6,50 €</small></span><span>Obed<small>6,50 €</small></span><span>Obed<small>6,50 €</small></span><span>Obed<small>6,50 €</small></span>
+      <span>Obed<small>6,50 €</small></span><span>Obed<small>6,50 €</small></span><span>Obed<small>6,50 €</small></span><span>Obed<small>6,50 €</small></span><span>Obed<small>6,50 €</small></span>
+      <span>Obed<small>6,50 €</small></span><span>Obed<small>6,50 €</small></span><span>Obed<small>6,50 €</small></span><span>Obed<small>6,50 €</small></span><span>Obed<small>6,50 €</small></span>
+      <span>Obed<small>6,50 €</small></span><span>Obed<small>6,50 €</small></span><span>Obed<small>6,50 €</small></span><span>Obed<small>6,50 €</small></span><span>Obed<small>6,50 €</small></span>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="kontakt" aria-labelledby="ct-h">
+  <div class="wrap">
+    <div class="sec-h"><div><span class="lab">Kontakt</span><h2 id="ct-h">Pri pulte v OC&nbsp;STOP&nbsp;SHOP</h2></div></div>
+    <div class="ct">
+      <div>
+        <h3>Adresa</h3>
+        <p class="addr">Ul. 1. mája 41</p>
+        <p>OC STOP SHOP<br>031 01 Liptovský Mikuláš</p>
+        <a class="btn btn--l" href="https://www.google.com/maps/search/Majo%E2%80%99s+Food+Liptovsk%C3%BD+Mikul%C3%A1%C5%A1" target="_blank" rel="noopener">Trasa v Google Maps</a>
+      </div>
+      <div>
+        <h3>Telefón a Facebook</h3>
+        <a class="bigtel" href="tel:+421908966089">0908 966 089</a>
+        <p><a href="https://www.facebook.com/people/Majos-Food/61555152182102/" target="_blank" rel="noopener">Majo’s Food na Facebooku</a> — tam zverejňujú menu na každý týždeň.</p>
+        <div class="score">
+          <div><b>3,9 / 5</b><small>Google · 263 hodnotení</small></div>
+          <div><b>86 %</b><small>odporúča na FB · 6 hodnotení</small></div>
+        </div>
+      </div>
+      <div>
+        <h3>Otváracie hodiny</h3>
+        <table>
+          <tr data-day="1"><td>Pondelok</td><td>10:30–19:00</td></tr>
+          <tr data-day="2"><td>Utorok</td><td>10:30–19:00</td></tr>
+          <tr data-day="3"><td>Streda</td><td>10:30–19:00</td></tr>
+          <tr data-day="4"><td>Štvrtok</td><td>10:30–19:00</td></tr>
+          <tr data-day="5"><td>Piatok</td><td>10:30–19:00</td></tr>
+          <tr data-day="6"><td>Sobota</td><td>9:00–19:00</td></tr>
+          <tr data-day="0"><td>Nedeľa</td><td>9:00–19:00</td></tr>
+        </table>
+        <p class="fine">Hodiny podľa Google (cez Wanderlog) — overiť priamo v podniku.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <strong>Neoficiálny návrh webu · webdavid.sk · 2026</strong>
+    <span>Majo’s Food, Ul. 1. mája 41, Liptovský Mikuláš · údaje z ich Facebooku a Google, 28. 9. 2026</span>
+  </div>
+</footer>
+
+<nav class="mbar" aria-label="Rýchle akcie"><a href="tel:+421908966089">Zavolať</a><a href="https://www.google.com/maps/search/Majo%E2%80%99s+Food+Liptovsk%C3%BD+Mikul%C3%A1%C5%A1" target="_blank" rel="noopener">Trasa</a></nav>
+
+<script>
+(function(){
+  "use strict";
+  var HOURS = {};
+  var NOTES = {};
+  var W = {open:"Teraz otvorené", closing:"Zatvárame o", closed:"Zatvorené", next:"otvárame"};
+  var ACC = ["v nedeľu","v pondelok","v utorok","v stredu","vo štvrtok","v piatok","v sobotu"];
+  function now(){
+    try{
+      var p = new Intl.DateTimeFormat("en-GB",{timeZone:"Europe/Bratislava",weekday:"short",hour:"2-digit",minute:"2-digit",hour12:false}).formatToParts(new Date());
+      var m = {}; p.forEach(function(x){ m[x.type] = x.value; });
+      return { day:{Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[m.weekday], mins:(parseInt(m.hour,10)%24)*60 + parseInt(m.minute,10) };
+    }catch(err){ var d = new Date(); return { day:d.getDay(), mins:d.getHours()*60 + d.getMinutes() }; }
+  }
+  function hm(t){ if(t >= 1440) return "polnoci"; var h = Math.floor(t/60), m = t%60; return h + ":" + (m<10?"0":"") + m; }
+  function status(n){
+    var spans = HOURS[n.day] || [], prev = HOURS[(n.day+6)%7] || [];
+    for(var j=0;j<prev.length;j++){ if(prev[j][1] > 1440 && n.mins < prev[j][1]-1440) return {open:true, end:prev[j][1]-1440}; }
+    for(var i=0;i<spans.length;i++){ if(n.mins >= spans[i][0] && n.mins < spans[i][1]) return {open:true, end:spans[i][1]}; }
+    for(var k=0;k<spans.length;k++){ if(spans[k][0] > n.mins) return {open:false, when:"dnes o " + hm(spans[k][0])}; }
+    for(var d=1; d<=7; d++){ var dd = (n.day+d)%7, s = HOURS[dd]; if(s && s.length) return {open:false, when:(d===1 ? "zajtra" : ACC[dd]) + " o " + hm(s[0][0])}; }
+    return {open:false, when:""};
+  }
+  function render(){
+    var n = now(), dot = document.getElementById("statusDot"), text = document.getElementById("statusText");
+    if(HOURS && dot && text){
+      var st = status(n);
+      if(st.open){
+        var left = st.end - n.mins;
+        if(left <= 60){ dot.className = "is-closing"; text.innerHTML = W.closing + " " + hm(st.end) + " · <b>ešte " + left + " min</b>"; }
+        else { dot.className = "is-open"; text.innerHTML = W.open + " · <b>do " + hm(st.end) + "</b>"; }
+      }else{
+        var note = NOTES[n.day], noted = note && !(HOURS[n.day]||[]).length;
+        dot.className = noted ? "is-note" : "is-closed";
+        text.innerHTML = noted ? "Dnes " + note : W.closed + (st.when ? " · <b>" + W.next + " " + st.when + "</b>" : "");
+      }
+    }
+    var label = document.getElementById("todayLabel");
+    if(HOURS && label && !label.textContent){
+      var s = HOURS[n.day] || [];
+      if(s.length) label.textContent = "Dnes " + s.map(function(x){ return hm(x[0]) + "–" + (x[1] >= 1440 ? "0:00" : hm(x[1])); }).join(", ");
+      else if(!NOTES[n.day]) label.textContent = "Dnes zatvorené";
+    }
+    [].forEach.call(document.querySelectorAll('[data-day="' + n.day + '"]'), function(r){ r.setAttribute("data-today",""); });
+  }
+  render(); setInterval(render, 60000);
+
+  var tabs = [].slice.call(document.querySelectorAll("[data-dow][aria-controls]"));
+  if(tabs.length){
+    var n = now(), pick = null;
+    tabs.forEach(function(t){ if(+t.getAttribute("data-dow") === n.day) pick = t; });
+    if(!pick) pick = (n.day === 0 || n.day === 6) ? tabs[tabs.length-1] : tabs[0];
+    function select(t){
+      tabs.forEach(function(x){ var on = x === t; x.setAttribute("aria-selected", on ? "true" : "false");
+        var p = document.getElementById(x.getAttribute("aria-controls")); if(p) p.hidden = !on; });
+    }
+    tabs.forEach(function(t){ t.addEventListener("click", function(){ select(t); }); });
+    select(pick);
+    var td = document.getElementById("todayDish");
+    if(td && +pick.getAttribute("data-dow") === n.day){
+      var first = document.querySelector("#" + pick.getAttribute("aria-controls") + " .dish-name");
+      if(first) td.textContent = first.firstChild.textContent.trim();
+    }
+  }
+})();
+</script>
